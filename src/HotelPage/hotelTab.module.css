@@ -1,0 +1,86 @@
+.HotelTabHolder {
+  position: relative;
+  top: 5vh;
+  left: 0;
+  background-color: #282c3f;
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  
+
+}
+.Container{
+    flex: 17%;
+    position: relative;
+    height: 100%;
+
+    width: 254px;
+
+}
+.emdiv{
+    position: relative;
+    height: 100%;
+    flex: 5%;
+}
+
+.hotelImage {
+  position: relative;
+    top: 50%;
+
+
+  width: 254px;
+  position: relative;
+
+    height: 165px;
+  transform: translateY(-50%);
+
+
+}
+.infoTextContainer{
+    flex: 67%;
+    position: relative;
+
+    height: 100%;
+    padding-left: 5%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: azure;
+}
+.dimtext{
+  position: relative;
+  color: #d0d3e4;
+  font-size: 13px;
+}
+.smallinfo{
+  flex: auto;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  padding: 1%;
+  width: calc(50%-5px);
+  height: 100%;
+  flex-direction: column;
+  
+
+}
+.smallinfoContainer{
+  width: 45%;
+  height: 30%;
+  display: flex;
+
+}
+.smallinfo:hover{
+
+  border-left: #a5a7b6 1px solid;
+  border-right: #a5a7b6 1px solid;
+}
+
+@media (max-width: 576px){
+    .Container{
+        display: none;
+    }
+}
+
+.infodimtext{
+  display: none;
+}

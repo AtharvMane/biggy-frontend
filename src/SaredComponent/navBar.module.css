@@ -1,0 +1,172 @@
+.topnav {
+  background-color: rgb(247, 247, 247);
+  box-shadow: 0 0 8px 3px rgb(212, 212, 212);
+
+  height: 10vh;
+  width: 100%;
+
+  z-index: 1;
+  position: fixed;
+}
+.navlist {
+  width: 90%;
+  position: relative;
+  left: 10%;
+  height: inherit;
+  z-index: inherit;
+  display: flex;
+}
+.navlistOpen {
+  width: 90%;
+  left: 10%;
+  position: relative;
+  z-index: inherit;
+  display: flex;
+  height: inherit;
+  transform: translateY(-50%);
+}
+.navlist > div {
+  position: relative;
+  flex: auto;
+  height: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+  margin: 0%;
+  vertical-align: middle;
+  z-index: inherit;
+
+  font-size: 118%;
+  padding: 1%;
+
+}
+.navlistOpen > div {
+  position: relative;
+  flex: auto;
+  height: 100%;
+  text-align: center;
+  top: 50%;
+
+  width: 25%;
+  margin: 0%;
+  vertical-align: middle;
+  z-index: inherit;
+  padding: 1%;
+  font-size: 118%;
+}
+.searchOpen{
+  height: 8vh;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  
+}
+.searchClosed{
+  display: none;
+}
+.searchContainer > input {
+  position: relative;
+  flex: 80%;
+  height: 75%;
+  text-align: center;
+  top: 50%;
+
+  transform:  translateY(-50%);
+  width:40%;
+  margin: 0%;
+  vertical-align: middle;
+  z-index: inherit;
+
+  font-size: 118%;
+}
+.searchContainer{
+  transform: translateX(-50%);
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  z-index: inherit;
+  position: relative;
+  height: 100%;
+  width: 75%;
+}
+.searchContainer > button{
+  position: relative;
+  top: 50%;
+  height: 75%;
+  text-align: center;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+  margin: 0%;
+  vertical-align: middle;
+  z-index: inherit;
+
+}
+.navButton {
+  display: none;
+}
+
+.navlist > div:hover {
+  background-color: rgb(190, 190, 190);
+}
+.navlistOpen > div:hover {
+  background-color: rgb(190, 190, 190);
+}
+@media all and (max-width: 500px) {
+  .navlist {
+    flex-direction: column;
+    display: none;
+    z-index: inherit;
+    top: 0;
+
+
+    background-color: white;
+    height: auto;
+  }
+  .navButton {
+    display: block;
+
+    top: 50%;
+    transform: translateY(-50%) translateX(-200%);
+    position: relative;
+    z-index: inherit;
+
+    left: 100%;
+    margin: 1%;
+
+    height: 80%;
+  }
+  .navlistOpen > div {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    vertical-align: middle;
+    z-index: inherit;
+    padding: 1%;
+    font-size: 118%;
+
+    transform: translateY(0);
+    top:50%;
+    
+
+
+  }
+  .navlistOpen{
+    flex-direction: column;
+    display: flex;
+    z-index: inherit;
+    width: 100%;
+    transform: translateY(4%);
+    background-color: white;
+    height: auto;
+    left: 0;
+  }
+}
+.logo {
+  height: 10vh;
+  width: 10vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,76 @@
+.parentdiv{
+    width: 100%;
+    position: relative;
+    top:5vh;
+    display:flex;
+}
+.menulist{
+   flex: 55%;
+   list-style-type:none;
+   padding: 2vw;
+   margin: 0;
+   min-height: 170px;
+
+}
+
+.cart{
+    flex: 45%;
+    list-style-type:none;
+    
+}
+
+.menulistItems{
+    height:20vh;
+    margin: 2px;
+    width: 100%;
+    border: 1px solid rgb(221, 221, 221);
+
+    display: flex;
+}
+.textClass{
+    height: 100%;
+    flex: 75%;
+    padding:5%
+}
+.menuImg{
+    flex: 25%;
+    height: 100%;
+}
+.addButton{
+    background-color: white;
+    width: 30%;
+    height:40%;
+    max-height: 35%;
+    min-width: 75px;
+    border: transparent;
+    font-size: 0.7rem;
+    box-shadow: 0px 1px 3px 3px rgb(197, 197, 197);
+}
+.addButton:active {
+    background-color: white;
+    box-shadow: 0 0px 3px 3px rgb(197, 197, 197);
+    transform: translateY(1px);
+  }
+
+  .menutext{
+      font-size: 0.95em;
+  }
+  @media (max-width: 576px) {
+    .menulistItems{
+        height:20vh;
+        margin: 2px;
+        width: 100%;
+        border: 1px solid rgb(221, 221, 221);
+    
+
+    }
+    .textClass{
+        height: 100%;
+        width:100%;
+        padding:5%
+    }
+    .menuImg{
+        flex: 25%;
+        height: 100%;
+    }
+  }

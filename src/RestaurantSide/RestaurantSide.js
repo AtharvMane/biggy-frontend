@@ -14,7 +14,7 @@ const [dataNeeded, setdataNeeded] = useState(false)
 
     let isGetting = true;
     const fetchdata=async()=>{await axios
-      .get(`http://localhost:5000/Hotels/${params.id}`)
+      .get(`https://biggy-backend.herokuapp.com/Hotels/${params.id}`)
       .then((res) => {
         if (isGetting) {
           sethotel(res.data);
@@ -36,7 +36,7 @@ const [dataNeeded, setdataNeeded] = useState(false)
   useEffect(() => {
     const continuousReq = setInterval(async () => {
       await axios
-        .get("http://localhost:5000/RestaurantSide/orders/getOrders", {
+        .get("https://biggy-backend.herokuapp.com/RestaurantSide/orders/getOrders", {
           headers: { restaurant_id: params.id},
         })
         .then((res) => {
@@ -54,7 +54,7 @@ const [dataNeeded, setdataNeeded] = useState(false)
   }, [params.id]);
   const orderDone = async (element) => {
     await axios
-      .post("http://localhost:5000/RestaurantSide/orders/setOrders", element)
+      .post("https://biggy-backend.herokuapp.com/RestaurantSide/orders/setOrders", element)
       .then((res) => {
       })
       .catch((err) => {
@@ -63,7 +63,7 @@ const [dataNeeded, setdataNeeded] = useState(false)
   };
   const postMenu = async () => {
     await axios
-      .post("http://localhost:5000/RestaurantSide/menu/addMenu",{_id:params.id,addToMenu:name,cost:cost,image:imgPath} ,{
+      .post("https://biggy-backend.herokuapp.com/RestaurantSide/menu/addMenu",{_id:params.id,addToMenu:name,cost:cost,image:imgPath} ,{
         headers: {"Authorization":`Bearer ${token}`},
       })
       .then((res) => {

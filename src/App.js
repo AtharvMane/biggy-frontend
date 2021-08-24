@@ -16,7 +16,7 @@ const App = () => {
   useEffect(() => {
     let isGetting = true;
     const fetchdata=async()=>{await axios
-      .get("http://localhost:5000/Hotels")
+      .get("https://biggy-backend.herokuapp.com/Hotels")
       .then((res) => {
         if (isGetting) {
           sethotel(res.data);

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import {useHistory, Link} from 'react-router-dom'
 import logincss from './loginPage.module.css'
 
-function LoginPage(props) {
+function RegisterPage(props) {
   const [user, setuser] = useState({ name:"",username: "", password: "" });
   const history=useHistory()
   const [error, seterror] = useState('')
@@ -12,7 +12,7 @@ function LoginPage(props) {
     if(user.name&&user.username&&user.password){  
     
     axios
-      .post("http://localhost:5000/auth/register", user, {
+      .post("https://biggy-backend.herokuapp.com/auth/register", user, {
         header: { "Component-Type": "application/json" },
       })
       .then((res) => {
@@ -22,7 +22,8 @@ function LoginPage(props) {
       )
 
       .catch((err) => {
-        seterror((prevError)=>prevError=err.response.data.error)
+        console.log(err.response.data)
+        seterror((prevError)=>prevError=err.response.data.error||err.response.data.errors.username.message)
         setTimeout(()=>{seterror('')},6000);
       })}else{
           seterror('Please enter in all the fields');
@@ -53,4 +54,4 @@ function LoginPage(props) {
   );
 }
 
-export default LoginPage;
+export default RegisterPage;

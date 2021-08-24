@@ -14,7 +14,7 @@ function LoginPage(props) {
       
     e.preventDefault();
     axios
-      .post("http://localhost:5000/RestaurantSide/login", user, {
+      .post("https://biggy-backend.herokuapp.com/RestaurantSide/login", user, {
         header: { "Component-Type": "application/json" },
       })
       .then((res) => {

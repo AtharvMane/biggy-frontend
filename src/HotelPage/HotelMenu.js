@@ -52,7 +52,7 @@ function HotelMenu(props) {
   const [response, setresponse] = useState(<></>)
   const sendOrder = () => {
     axios
-      .post("http://localhost:5000/pendingOrders", article)
+      .post("https://biggy-backend.herokuapp.com/pendingOrders", article)
       .then((res) => {setresponse(<p>{res.data.message}</p>);setTimeout(()=>{setresponse(<></>)},2000);localStorage.removeItem(`cart${props.hotelID}`);setorderDish([])})
       .catch((err)=>{console.log(err);setresponse(<p>Some Error Occured</p>);setTimeout(setresponse(<></>),2000);})
   };

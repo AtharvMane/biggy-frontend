@@ -12,7 +12,7 @@ useEffect(() => {
     let isVerifying=true
     if(token){
     
-    axios.get(`http://localhost:5000/private/${usertype}`,{headers:{"Authorization":`Bearer ${token}`}})
+    axios.get(`https://biggy-backend.herokuapp.com/private/${usertype}`,{headers:{"Authorization":`Bearer ${token}`}})
     .then((res,req)=>{if(isVerifying){setisAuth(res.data.success); setloading(false); }})
     
     .catch((err)=>{console.log(err);setloading(false)})

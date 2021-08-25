@@ -12,6 +12,7 @@ import RestaurantRegisterPage from "./Auth Pages/RestaurantRegister";
 import RestaurantSide from "./RestaurantSide/RestaurantSide";
 import RestaurantLogin from "./Auth Pages/restaurantLogin";
 import HotelSearchContainer from "./HotelRecommendationPage/HotelSearchContainer";
+import FourZeroFour from "./routing/FourZeroFour";
 const App = () => {
   const [hotel, sethotel] = useState([]);
   useEffect(() => {
@@ -84,7 +85,7 @@ const App = () => {
 
               />
 
-
+            <Route><FourZeroFour/></Route>
         </Switch>
       </div>
     </BrowserRouter>

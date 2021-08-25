@@ -48,13 +48,13 @@ function HotelMenu(props) {
       setorderDish(JSON.parse(localStorage.getItem(`cart${props.hotelID}`)));
     }
   };
-  const article = { cart: orderDish, restaurant_id: props.hotelID};
+  const article = { cart: orderDish, restaurant_id: props.hotelID, location: localStorage.getItem("location")};
   const [response, setresponse] = useState(<></>)
   const sendOrder = () => {
     axios
       .post("https://biggy-backend.herokuapp.com/pendingOrders", article)
       .then((res) => {setresponse(<p>{res.data.message}</p>);setTimeout(()=>{setresponse(<></>)},2000);localStorage.removeItem(`cart${props.hotelID}`);setorderDish([])})
-      .catch((err)=>{console.log(err);setresponse(<p>Some Error Occured</p>);setTimeout(setresponse(<></>),2000);})
+      .catch((err)=>{console.log(err);setresponse(err.response.data.errors.location.message?<p>{err.response.data.errors.location.message}</p>:<p>Some Error Occured</p>);setTimeout(setresponse(<></>),2000);})
   };
 
   return (

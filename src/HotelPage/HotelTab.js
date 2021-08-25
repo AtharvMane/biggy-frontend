@@ -16,7 +16,7 @@ const HotelTab = (props) => {
         <div className={hotelTab.smallinfoContainer}>
         <div className={hotelTab.smallinfo}>
             <h5  style={{textAlign:"center"}}>
-                4.7 stars
+                {props.score} stars
             </h5>
             <p className={hotelTab.dimtext+" "+hotelTab.infodimtext} style={{textAlign:"center"}}>ratings</p>
             </div>

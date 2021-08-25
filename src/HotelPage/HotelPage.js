@@ -6,7 +6,7 @@ const HotelPage = (props) => {
   return (
 
       <div style={{ position: "relative", top: "10vh"}}>
-        <HotelTab hotelImage={props.hotel.image} hotelName={props.hotel.name} hotelCuisine={props.hotel.cuisine}/>
+        <HotelTab hotelImage={props.hotel.image} hotelName={props.hotel.name} score={props.hotel.score} hotelCuisine={props.hotel.cuisine}/>
         <HotelMenu menu={props.hotel.menu} hotelID={props.hotel._id}/>
       </div>
 

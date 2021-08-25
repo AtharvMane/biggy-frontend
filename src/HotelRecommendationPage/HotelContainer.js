@@ -6,7 +6,7 @@ const HotelContainer = (props) => {
 
 
 
-  const cards= props.hotel.map((e)=>{if (e) {return <Cards key={e._id} id={"/restaurants/"+e._id} hotelName={e.name} hotelDescription={'Cuisine:'+e.cuisine}/>} else{return <></>}})   
+  const cards= props.hotel.map((e)=>{if (e) {return <Cards key={e._id} id={"/restaurants/"+e._id} hotelImage={e.image} hotelName={e.name} rating={e.score} hotelDescription={'Cuisine:'+e.cuisine}/>} else{return <></>}})   
 
 
   

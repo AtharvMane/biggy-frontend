@@ -8,6 +8,7 @@ import LoginPage from "./Auth Pages/loginPage";
 import "./main.css";
 import PrivateRoute from "./routing/PrivateRoute";
 import RegisterPage from "./Auth Pages/RegisterPage";
+import RestaurantRegisterPage from "./Auth Pages/RestaurantRegister";
 import RestaurantSide from "./RestaurantSide/RestaurantSide";
 import RestaurantLogin from "./Auth Pages/restaurantLogin";
 import HotelSearchContainer from "./HotelRecommendationPage/HotelSearchContainer";
@@ -44,7 +45,9 @@ const App = () => {
           <Route exact path={"/restaurantLogin"}>
             <RestaurantLogin />
           </Route>
-
+          <Route exact path={"/restaurantRegister"}>
+            <RestaurantRegisterPage />
+          </Route>
           <PrivateRoute
             exact
             path={"/restaurants"}

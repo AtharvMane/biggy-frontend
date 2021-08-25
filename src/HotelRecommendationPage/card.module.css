@@ -17,26 +17,10 @@
   margin-right: 0;
   margin-left: 0;
 }
-.card > .list-group {
-  border-top: inherit;
-  border-bottom: inherit;
-}
-.card > .list-group:first-child {
-  border-top-width: 0;
-  border-top-left-radius: calc(0.25rem - 1px);
-  border-top-right-radius: calc(0.25rem - 1px);
-}
-.card > .list-group:last-child {
-  border-bottom-width: 0;
-  border-bottom-right-radius: calc(0.25rem - 1px);
-  border-bottom-left-radius: calc(0.25rem - 1px);
-}
-.card > .card-header + .list-group,
-.card > .list-group + .card-footer {
-  border-top: 0;
-}
 
-.card-body {
+
+
+.cardBody{
   flex: 1 1 auto;
   padding: 0 1rem;
 }
@@ -46,61 +30,18 @@
 }
 
 
-.card-img-top {
+.cardImgTop {
   position: relative;
   left: 50%;
   top: 27%;
   transform: translateY(-50%) translateX(-50%);
   width: 80%;
   height: 65%;
-}
-
-
-.card-img-top {
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
-
-.card-group > .card {
-  margin-bottom: 0.75rem;
-}
-@media (min-width: 576px) {
-  .card-group {
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .card-group > .card {
-    flex: 1 0 0%;
-    margin-bottom: 0;
-  }
-  .card-group > .card + .card {
-    margin-left: 0;
-    border-left: 0;
-  }
-  .card-group > .card:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .card-group > .card:not(:last-child) .card-img-top,
-.card-group > .card:not(:last-child) .card-header {
-    border-top-right-radius: 0;
-  }
-  .card-group > .card:not(:last-child) .card-img-bottom,
-.card-group > .card:not(:last-child) .card-footer {
-    border-bottom-right-radius: 0;
-  }
-  .card-group > .card:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .card-group > .card:not(:first-child) .card-img-top,
-.card-group > .card:not(:first-child) .card-header {
-    border-top-left-radius: 0;
-  }
-  .card-group > .card:not(:first-child) .card-img-bottom,
-.card-group > .card:not(:first-child) .card-footer {
-    border-bottom-left-radius: 0;
-  }
+.col {
+  flex: 1 0 0%;
 }
 
 *,
@@ -118,18 +59,20 @@
 
 
 
-a {
-  color: black;
-  text-decoration: none;
-}
 
 .card:hover {
   box-shadow: 0 0 4px 4px rgba(0,0,0,.15) !important;
 }
 
-.col-md-4 {
-  flex: 0 0 auto;
-  width: 33.33333333%;
+@media (min-width: 992px) {
+
+
+  .colLg4 {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+
+
 }
 
 /*The MIT License (MIT)

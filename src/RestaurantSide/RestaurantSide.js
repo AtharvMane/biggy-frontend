@@ -93,6 +93,15 @@ if(hotel[0]){
                 <div className={HotelMenuCss.textClass}>
                   <p className={HotelMenuCss.menutext}>{e.name} </p>
                   <p className={HotelMenuCss.menutext}>{e.cost} </p>
+                  <button
+            onClick={() => {
+              setaddMenuForm((prevForm) => !prevForm);
+            }}
+            style={{ height: "30px" }}
+            className={HotelMenuCss.addButton}
+          >
+            Add To Menu
+          </button>
                 </div>
               </li>
             );
@@ -104,7 +113,7 @@ if(hotel[0]){
             style={{ height: "30px" }}
             className={HotelMenuCss.addButton}
           >
-            Hello
+            Add to Menu
           </button>
           {addMenuForm && (
             <li className={HotelMenuCss.menulistItems}>
@@ -129,6 +138,7 @@ if(hotel[0]){
                   type="submit"
                   style={{ height: "30px" }}
                   className={HotelMenuCss.addButton}
+                  value="Add"
                 ></input>
                 
               </form>
